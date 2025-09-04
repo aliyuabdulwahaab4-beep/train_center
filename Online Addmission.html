@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+/>
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    .color{
+            color: white;
+        }
+        .fff{
+            color: rgb(11, 190, 11) !important;
+        }
+        .nav-link{
+            color: white;
+        }
+        .call{
+            background-color: transparent !important;
+            border: 2px solid rgb(10, 181, 10);
+            padding: 8px;
+            color: rgb(11, 175, 11) !important;
+        }
+        .transparent{
+           background: #02055c;
+           background: linear-gradient(110deg,rgba(2, 5, 92, 1) 32%, rgba(35, 100, 114, 1) 66%);
+        }
+        .top-header {
+            font-size: 0.875rem; 
+            background: url(https://cdn.pixabay.com/photo/2016/02/03/08/32/banner-1176676_1280.jpg)
+        }
+        .face{
+            color: rgb(57, 199, 246);
+        }
+        .frog{
+            color: red;
+        }
+        .header-course{
+           background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://cdn.pixabay.com/photo/2015/10/27/08/34/banner-1008448_1280.jpg); 
+           object-fit: cover;
+           background-repeat: no-repeat;
+           background-size: cover;
+           height: 15vh;
+           color: white;
+           position: relative;
+        }
+        .header-course h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-left: 8rem;
+            padding-top: 1rem;
+        }
+         .text{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          margin-top: 40px;
+        }
+        .caro{
+          border-radius: 10.5px;
+          box-shadow:0px 20px 20px rgba(30, 7, 7, 0.6);
+        }
+        .caro:hover{
+          transform: scale(1.03); 
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.982);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+         .slider{
+          position: relative;
+        }
+        .section-text{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          text-align: center;
+          width: 90%;
+        }
+        .section-text h4{
+          font-size: 1.6rem;
+          color: #1fd85b;
+          margin-bottom: 0.5rem;
+          font-weight: bold;
+        }
+        .section-text p {
+          font-size: 0.95rem;
+          margin-bottom: 0.5rem;
+        }
+        .section-text a {
+          text-decoration: underline;
+          font-size: 0.9rem;
+          color: #1fd85b;
+        }
+        .section{
+          width: 85%;
+          height: 15rem;
+          object-fit: cover;
+          display: block;
+          margin: 40px auto;
+          background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('media/images/sliders/slider3.jpg');
+          background-size: cover;
+        }
+        .nav-link{
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #9c0505; 
+        }
+
+        .nav-link.active {
+            color: orange !important;
+        }
+        .footer-contact-section {
+          background: #dbfaf5;
+          padding: 30px 15px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .footer-bg {
+          padding: 0;
+          position: relative;
+          text-align: center;
+        }
+
+        .footer-bg h1 {
+          font-family: 'Comic Sans MS', cursive, sans-serif;
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 30px;
+          color: #000;
+        }
+
+        .contact-form {
+         width: 100%;
+         max-width: 500px;
+         margin:  auto;
+        }
+
+        .contact-form textarea {
+          height:50px ;
+          padding: 15px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          margin-bottom: 15px;
+          font-size: 14px;
+        }
+        .contact-form input {
+          width: 15rem;
+          padding: 5px 5rem 5px 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+          margin: 6px;
+        }
+
+        .contact-form button {
+          border: 2px solid rgb(18, 26, 1);
+          color: rgb(10, 14, 1);
+          padding: 8px 20px;
+          border-radius: 4px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          background-color: transparent;
+        }
+
+        .contact-form button:hover {
+          color: white;
+          background-color: orange;
+        }
+
+        @media (max-width: 768px) {
+        .footer-contact-section{
+          padding: 30px 15px;
+        }
+        .contact-form{
+          padding: 0 10px;
+        }
+      }
+      .noo{
+        background-color: transparent;
+        border: 2px solid rgb(6, 237, 254);
+        color: rgb(5, 249, 249);
+      }
+      .colour{
+        background: #031994;
+      }
+      .shape{
+        color: white !important;
+      }
+      .addmission{
+        background: #8ae1fe;
+      }
+      .hh{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: bold;
+      }
+      .forms{
+        padding: 35px 50px;
+      }
+       .header-course h3{
+        padding-left: 5rem;
+        padding-top: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+    .header-course a{
+        text-decoration: none;
+        color: antiquewhite;
+    }
+    @media (max-width: 467px) {
+        .header-course h3{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            padding: 10px;
+        }
+    }
+ </style>    
+
+</head>
+<body>
+    <div class="top-header text-white">
+  <div class="container-fluid">
+    <div class="row py-1 align-items-center">
+      <div class="col-md-4 text-center d-flex justify-content-center align-items-center gap-2">
+        <i class="bi bi-telephone-fill me-1 face"></i> +234 8104694917, +234 8104694917
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <marquee behavior="scroll" direction="left" scrollamount="5" class="text-nowrap w-100 face">
+          <i class="bi bi-geo-alt-fill me-1 frog"></i> Way, Beside Lawwood Hotel, Oke Ado Bus Stop
+        </marquee>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center  align-items-center gap-2 face">
+        <a href="#" class="text-white"><i class="bi bi-whatsapp face"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-instagram face"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-envelope-fill face"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="mb-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="fort.png" alt="" width="35px" height="35px" class="me-2">
+                    <span class="fs-5 color">Rst</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse justify-content-end me-5" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="bootstrap 2.html" class="nav-link ">Home</a></li>
+                        <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+                        <li class="nav-item"><a href="Online Addmission.html" class="nav-link fff">Online Addmission</a></li>
+                        <li class="nav-item"><a href="training-center.html" class="nav-link">Training Center</a></li>
+                        <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link call"><i class="bi bi-telephone"></i> Call us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+      <section class="header-course">
+        <h3> << our courses</h3>
+    </section>
+    <section class="addmission">
+        <div class="forms">
+            <form class="row g-2">
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Full-Name</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Email-Address</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Phone:</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Intrested-Course</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select">
+                        <option selected>Choose-Here...</option>
+                        <option>Lagos</option>
+                        <option>Oyo</option>
+                        <option>Kano</option>
+                        <option>Abeokuta</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-12">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Apply now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    </section>
+    <section class="footer-contact-section">
+  <div class="footer-bg">
+    <h1>WE WOULD LOVE TO HEAR FROM YOU !</h1>
+    
+    <form class="contact-form mt-4">
+  <div class="row g-3">
+    <div class="col-12">
+      <textarea class="form-control" placeholder="Enter your message..." required></textarea>
+    </div>
+    <div class="col-md-6 col-12">
+      <input type="text" class="form-control" placeholder="Enter full name" required />
+    </div>
+    <div class="col-md-6 col-12">
+      <input type="email" class="form-control" placeholder="Enter email" required />
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+      <button type="submit" class="btn btn-outline-warning fw-bold">Submit</button>
+    </div>
+
+  </div>
+</form>
+  </div>
+</section>
+<section class="colour">
+  <div class="container">
+    <footer class="py-3 ">
+      <div class="row shape">
+        <div class="col-6 col-md-2 mb-1">
+          <h5>Section</h5>
+          <ul class="nav flex-column shape">
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-body-secondary shape">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">About</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-1 ">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">About</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-1">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary shape">About</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 offset-md-1 mb-1">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2"> <label for="newsletter1"
+                class="visually-hidden">Email address</label> <input id="newsletter1" type="email" class="form-control"
+                placeholder="Email address"> <button class="btn btn-primary noo" type="button">Subscribe</button> </div>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-3 my-3 border-top">
+        <p class="shape">© 2025 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi" width="24"
+                height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><svg class="bi" width="24"
+                height="24" aria-hidden="true">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</section>
+<script src="myscript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>    
+</body>
+</html>
